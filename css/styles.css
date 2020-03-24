@@ -283,7 +283,7 @@ img {
   background: #00A67C;
 }
 
-.news_subscription_list input[type="checkbox"]:checked + label::before, .sections_subscription_list input[type="checkbox"]:checked + label{
+.news_subscription_list input[type="checkbox"]:checked + label::before, .sections_subscription_list input[type="checkbox"]:checked + label::before{
   content: 'V';
  
 ::selection {
