@@ -278,12 +278,12 @@ img {
   margin-right: 10px;
 }
 
-.news_subscription_list input[type="checkbox"]:checked + label {
+.news_subscription_list input[type="checkbox"]:checked + label, .sections_subscription_list input[type="checkbox"]:checked + label{
   color: #ffffff;
   background: #00A67C;
 }
 
-.news_subscription_list input[type="checkbox"]:checked + label::before {
+.news_subscription_list input[type="checkbox"]:checked + label::before, .sections_subscription_list input[type="checkbox"]:checked + label{
   content: 'V';
  
 ::selection {
