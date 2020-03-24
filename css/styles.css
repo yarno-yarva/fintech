@@ -380,6 +380,11 @@ img {
   border-bottom: 1px #00A67C solid;
 }
 
+.news:last-child {
+    padding-bottom: 150px;
+  border-bottom:  none;
+}
+
 .news_content {
 	width: 50%;
 }
