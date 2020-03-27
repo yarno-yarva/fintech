@@ -718,6 +718,15 @@ h3 {
 	width: 100%;
 }
 
+.news_container {
+   padding-top: 34px;
+}
+
+.news_title {
+  font-size: 18px;
+  line-height: 32px;
+}
+
 .news_img_block  {
     max-width: 100%;
 }
