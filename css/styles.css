@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: OpenSans;
-  src: url(/fonts/OpenSans-light.woff);
+  src: url(https://yarno-yarva.github.io/fintech/fonts/OpenSans-Light.woff);
   font-weight: 300;
   font-style: light;
 }
@@ -30,7 +30,7 @@ body {
 -moz-appearance: none;
 }
 
-header, main {
+header, main, footer {
 	max-width: 1440px;
 	width: 100%;
 	margin-left: auto;
@@ -386,7 +386,7 @@ img {
 
 
 .news:last-child {
-   border  none;
+   border-bottom:  none;
  }
 
 .news_content {
@@ -429,7 +429,7 @@ img {
   color: #b59f5b;
   }
 
-.news-text {
+.news_text {
  margin-top: 20px;
  font-size: 18px;
  line-height: 27px;
@@ -469,6 +469,30 @@ img {
 }
 
 /*------------------------footer-------------------------*/
+
+.block_footer {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+.adress {
+	color: #00A67C;
+    margin-top: 40px;
+    font-size: 29px;
+    text-align: center;
+}
+
+.copyright {
+	color: #00A67C;
+    margin-top: 20px;
+     font-size: 18px;
+    text-align: center;
+
+}
+
+
+/*----------------------- media 1 --------------------*/
 
 @media (max-width: 960px) and (min-width: 416px) {
 }
@@ -726,7 +750,7 @@ h3 {
 	width: 100%;
 }
 
-.news_container {
+.news_img_block {
    padding-top: 34px;
 }
 
@@ -737,8 +761,31 @@ h3 {
   margin-bottom: 18px;
 }
 
+.news_text {
+	font-weight: 300;
+}
+
 .news_img_block  {
     max-width: 100%;
+}
+
+/*------------------------footer-----415--------------------*/
+
+.block_footer {
+	margin-bottom: 18px;
+}
+
+.adress {
+    margin-top: 18px;
+    font-size: 18px;
+    line-height: 24px;
+   
+}
+
+.copyright {
+	margin-top: 28px;
+    font-size: 16px;
+    font-weight: 200;
 }
 
 }
