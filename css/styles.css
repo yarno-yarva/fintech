@@ -1,6 +1,6 @@
 @font-face {
   font-family: OpenSans;
-  src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
+  src: url(https://yarno-yarva.github.io/fintech/fonts/OpenSans-Regular.woff);
   font-weight: 400;
   font-style: normal;
 }
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: OpenSans;
-  src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
+  src: url(https://yarno-yarva.github.io/fintech/fonts/OpenSans-Bold.woff);
   font-weight: 700;
   font-style: bold;
 }
@@ -24,6 +24,7 @@
 body {
  margin: 0;
  border: 0;
+ min-width: 320px;
  font-family: OpenSans, sans-serif;
  line-height: 1.2;
 -webkit-appearance: none;
@@ -37,7 +38,7 @@ header, main, footer {
 	margin-right: auto;
 }
 
-h1 {
+.h1 {
   font-size: 76px;
   color: #00A67C;
   margin: 0;
@@ -45,23 +46,15 @@ h1 {
   text-transform: none;
 }
 
-h2 {
+.h2 {
   font-size: 47px;
-  line-height: 54px;
+  line-height: 1.15;
   color: #000000;
   margin: 0;
   font-weight: 400;
   text-transform: none;
 }
 
-h3 {
-  font-size: 29px;
-  line-height: 54px;
-  color: #00A67C;
-  margin: 0;
-  font-weight: 600;
-  text-transform: none;
-}
 
 img {
   max-width: 100%;
@@ -71,39 +64,37 @@ img {
 
 /*----------------------- header ----------------------*/
 
+.header {
+	padding-top: 20px;
+}
+
 .header-container {
 	display: block;
 	position: relative;
-	margin-top: 20px;
 	margin-left: 6.6%;
 	margin-right: 6.6%;
+	border-bottom: 3px #00A67C solid;
+	padding-bottom: 70px;
 }
 
 .slogan {
   font-size: 29px;
   line-height: 1.1;
   color: #00A67C;
-  margin: 0;
-  padding-top: 70px;
+  margin-top: 70px;
+  margin-bottom: 0;
   font-weight: 600;
   text-transform: none;
 }
 
-.header_line {
-	display: block;
-	margin-top: 70px;
-	width: 100%;
-	height: 3px;
-	background-color: #00A67C;
 
-}
 
 /*----------------------- menu ----------------------*/
 .hamburger-menu {
   display: flex;
   position: absolute;
   top: 0;
-  right: 400px;
+  right: 0;
 }
 
 #menu__toggle {
@@ -123,7 +114,7 @@ img {
 }
 #menu__toggle:checked ~ .menu__box {
   visibility: visible;
-  left: 130px;
+  left: -270px;
 }
 
 .menu__btn {
@@ -131,7 +122,7 @@ img {
   align-items: center;
   position: absolute;
   top: 20px;
-  left: 370px;
+  right: 0;
   width: 55px;
   height: 10px;
   cursor: pointer;
@@ -160,10 +151,8 @@ img {
 
 .menu__box {
   display: block;
-  position: absolute;
   visibility: hidden;
   top: -10px;
-  left: 100%;
   width: 300px;
   margin: 0;
   padding: 60px 0 5px 0;
@@ -190,7 +179,7 @@ img {
 .exclusive {
 	display: block;
 	position: relative;
-	margin-top: 70px;
+	padding-top: 70px;
 	margin-left: 6.6%;
 	margin-right: 6.6%;
 	z-index: -1;
@@ -198,17 +187,16 @@ img {
 
 .grand_img_container {
 	max-width: 1200px;
-	width: 100%
+	width: 100%;
 	padding-top: 40px;
 }
 
 .exclusive_content {
   max-width: 920px;
   font-size: 18px;
-  line-height: 32px;
+  line-height: 1.8;
   color: #000000;
-  padding-top: 30px;
-  margin: 0 auto 0 auto;
+  margin: 30px auto 0 auto;
   font-weight: 400;
   text-transform: none;
 }
@@ -223,24 +211,25 @@ img {
 
 .news_selection_color_box {
 	display: block;
-	padding-top: 70px;
 	background-color: #F7FDFB;
 	padding-bottom: 50px;
 }
 
-.news_selection, .regions_selection, .news{
+.news_selection, .regions_selection {
 	display: block;
 	position: relative;
+	padding-top: 70px;
 	margin-top: 0px;
-	margin-left: 6.6%;
-	margin-right: 6.6%;
+	padding-left: 6.6%;
+    padding-right: 6.6%;
 }
+
 
 /* tags colections */
 
 .subscription_text {
   font-size: 29px;
-  line-height: 54px;
+  line-height: 1.9;
   color: #00A67C;
   margin: 0;
   font-weight: 600;
@@ -248,8 +237,11 @@ img {
 
 }
 
-.sections_subscription_list, .news_subscription_list  {
+.list_news_selection, .list_regions_selection {
   padding-top: 70px;
+}
+
+.sections_subscription_list, .news_subscription_list  {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -259,6 +251,10 @@ img {
   flex-wrap: wrap;
 }
 
+.news_subscription_item {
+  padding-bottom: 30px;
+  padding-right: 30px;
+}
 
 .news_subscription_item input[type="checkbox"] {
   display: none;
@@ -275,8 +271,6 @@ img {
   border: 3px solid #00A67C;
   border-radius: 10px;
   padding: 10px 35px;
-  margin-bottom: 30px;
-  margin-right: 30px;
 }
 
 .news_subscription_item label::before {
@@ -305,7 +299,6 @@ img {
 
 .regions_selection_color_box {
 	display: block;
-	padding-top: 70px;
 	background-color: #E7F9F4;
 	padding-bottom: 50px;
 }
@@ -378,10 +371,12 @@ img {
 /*-------news sections--------------- */
 
 .news {
- display: flex;
- padding-bottom: 50px;
- border-bottom: 1px #00A67C solid;
- margin-top: 61px; 
+    display: flex;
+    padding-top: 61px; 
+    padding-bottom: 50px;
+    padding-left: 6.6%;
+    padding-right: 6.6%;
+    border-bottom: 1px #00A67C solid;
 }
 
 
@@ -395,7 +390,7 @@ img {
 
 .news_title {
   font-size: 29px;
-  line-height: 54px;
+  line-height: 1.9;
   color: #000000;
   font-weight: 400;
   text-decoration: none;
@@ -432,7 +427,7 @@ img {
 .news_text {
  margin-top: 20px;
  font-size: 18px;
- line-height: 27px;
+ line-height: 1.5;
  font-weight: 400;
  text-transform: none;
  color: #000000; 
@@ -473,12 +468,12 @@ img {
 .block_footer {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 20px;
+	padding-bottom: 20px;
+	padding-top: 40px;
 }
 
 .adress {
 	color: #00A67C;
-    margin-top: 40px;
     font-size: 29px;
     text-align: center;
 }
@@ -502,36 +497,41 @@ img {
 header, main {
 	max-width: 400px;
 	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
 }
 
-h1 {
+.h1 {
   font-size: 27px;
    
 }
 
-h2 {
+.h2 {
   font-size: 23px;
-  line-height: 32px;
+  line-height: 1.4;
  }
 
-h3 {
+.h3 {
   font-size: 18px;
-  line-height: 32px;
+  line-height: 1.8;
   font-weight: 400;
 }
 
-.header-container {
 
-	margin-top: 16px;
+
+.header {
+
+	padding-top: 16px;
 	
+}
+
+.header-container {
+	padding-bottom: 28px; 
+	border-bottom: 2px #00A67C solid;
 }
 
 .slogan {
   font-size: 16px;
-  line-height: 22px;
-  padding-top: 28px;
+  line-height: 1.4;
+  margin-top: 28px;
  }
 
 .header_line {
@@ -544,17 +544,16 @@ h3 {
   display: flex;
   position: absolute;
   top: 0;
-  right: 400px;
+  right: 0;
 }
 
 #menu__toggle:checked ~ .menu__box {
   visibility: visible;
-  left: 230px;
+  left: -180px;
 }
 
 .menu__btn {
   top: 10px;
-  left: 390px;
   width: 30px;
  
 }
@@ -579,7 +578,7 @@ h3 {
   position: absolute;
   visibility: hidden;
   top: -10;
-  left: 100%;
+  right: 0;
   width: 200px;
   margin: 0;
   padding: 40px 0 50px 0;
@@ -600,7 +599,7 @@ h3 {
 
 
 .exclusive {
-	margin-top: 30px;
+	padding-top: 30px;
 	}
 
 .grand_img_container {
@@ -610,7 +609,6 @@ h3 {
 
 .exclusive_content {
   max-width: 410px;
-  padding-top: 30px;
   font-weight: 200;
 }
 
@@ -621,28 +619,38 @@ h3 {
 
 .news_selection_color_box {
 	display: block;
-	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
-.news_selection, .regions_selection, .news{
+.news_selection, .regions_selection {
 	display: block;
 	position: relative;
+	padding-top: 20px;
 	margin-top: 0px;
-	margin-left: 6.6%;
-	margin-right: 6.6%;
+
+}
+
+.news {
+	display: block;
+	 padding-top: 10px;
+	padding-left: 6.6%;
+    padding-right: 6.6%;
+     padding-bottom: 50px;
 }
 
 .subscription_text {
   font-size: 18px;
-  line-height: 32px;
+  line-height: 1.8;
   color: #00A67C;
   font-weight: 400;
 
 }
 
+.list_news_selection, .list_regions_selection {
+   padding-top: 10px;
+}
+
 .sections_subscription_list, .news_subscription_list  {
-  padding-top: 10px;
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -652,6 +660,10 @@ h3 {
   flex-wrap: wrap;
 }
 
+.news_subscription_item {
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
 
 .news_subscription_item input[type="checkbox"] {
   display: none;
@@ -668,8 +680,6 @@ h3 {
   border: 2px solid #00A67C;
   border-radius: 10px;
   padding: 10px 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
 }
 
 .news_subscription_item label::before {
@@ -681,7 +691,6 @@ h3 {
 
 .regions_selection_color_box {
 	display: block;
-	padding-top: 20px;
 	background-color: #E7F9F4;
 	padding-bottom: 20px;
 }
@@ -756,7 +765,7 @@ h3 {
 
 .news_title {
   font-size: 18px;
-  line-height: 32px;
+  line-height: 1.8;
   margin-top: 21px;
   margin-bottom: 18px;
 }
@@ -772,13 +781,13 @@ h3 {
 /*------------------------footer-----415--------------------*/
 
 .block_footer {
-	margin-bottom: 18px;
+	padding-top: 18px;
+	padding-bottom: 18px;
 }
 
 .adress {
-    margin-top: 18px;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 1.35;
    
 }
 
